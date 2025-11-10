@@ -10,16 +10,16 @@ public class VendingMachine {
         System.out.println("2. Acheter un produit : ");
         System.out.println("3. Quitter :");
     }
-    static void showProducts(String[] arr1, double[] arr2, int[] arr3){
+    static void showProducts(){
         System.out.println("-- Available Products --");
         System.out.println("Product  |   Prix  | Stock");
-        for (int i = 0; i < arr1.length; i++) {
-        System.out.println(arr1[i] + "       " + arr2[i] + "      " + arr3[i]);
+        for (int i = 0; i < products.length; i++) {
+        System.out.println(products[i] + "       " + prix[i] + "      " + stock[i]);
         }
 
     }
 
-    static void buyProduct(String[] products) {
+    static void buyProduct() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the product number : ");
@@ -45,10 +45,10 @@ public class VendingMachine {
 
             switch (choice) {
                 case "1" :
-                    showProducts(products, prix, stock);
+                    showProducts();
                     break;
                 case "2":
-                    buyProduct(products);
+                    buyProduct();
                     break;
                 case "3":
                     break;
